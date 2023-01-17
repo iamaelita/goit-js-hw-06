@@ -13,14 +13,14 @@ const counterValue = document.querySelector('#value');
 
 
 const decrementBtn = document.querySelector('#counter button[data-action="decrement"]');
-const incrementBtn = document.querySelector('#counter button[data-action= "increment"]');
+const incrementBtn = document.querySelector('#counter button[data-action="increment"]');
     
     function onDecrementBtnClick() {
-        counterValue += 1;
+        counterValue.textContent += 1;
     };
 
      function onIncrementBtnClick() {
-    counterValue -= 1;
+    counterValue.textContent -= 1;
     };
 
 
