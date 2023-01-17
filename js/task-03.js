@@ -26,16 +26,11 @@ const images = [
 //Усі елементи галереї повинні додаватися в DOM за одну операцію додавання.
 //Додай мінімальне оформлення галереї флексбоксами або грідами через CSS класи.
 
-const galleryRef = document.querySelector('#gallery');
-galleryRef.classList.add('gallery__list');
-
-const makeGallery = ({ url, alt }) => {
-  return `<li class="gallery__item"> <img src="${url}" alt="${alt}" class="img__task3" /> </li>`;
-};
-
-const galleryMarkup = images.map(makeGallery).join('');
-
-galleryRef.insertAdjacentHTML('afterbegin', galleryMarkup);
-
-
+const galleryEl = document.querySelector('.gallery');
+console.log(galleryEl);
+const imageEl = images.map(image => {
+  return `<li class="gallery__item"><img class="gallery__img" src="${image.url}" alt="${image.alt}"/>`
+}).join("");
+console.log(imageEl);
+galleryEl.insertAdjacentHTML("beforeend", imageEl);
 
