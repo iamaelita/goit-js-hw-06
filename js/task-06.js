@@ -25,7 +25,20 @@
 //  border-color: #f44336;
 //}
 
-const inputRef = document.querySelector('#validation-input');
-function onInputTyping() {
-    const inputTextLength = inputRef.value.length;
-}
+const input = document.querySelector('#validation-input');
+
+
+input.addEventListener("blur", (event) => {
+    if (event.currentTarget.value.length == input.dataset.length) {
+        input.classList.add("valid");
+        input.classList.remove("invalid");
+    }
+    
+    else {
+        input.classList.add("invalid");
+        input.classList.remove("valid");
+    }
+});
+
+
+
