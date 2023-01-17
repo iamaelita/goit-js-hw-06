@@ -10,10 +10,10 @@
 //Додай слухачів кліків до кнопок, всередині яких збільшуй або зменшуй значення лічильника.
 //Оновлюй інтерфейс новим значенням змінної counterValue.
 const counterValue = document.querySelector('#value');
-let counterValue = 0;
+
 
 const decrementBtn = document.querySelector('#counter button[data-action="decrement"]');
-const incrementBtn = document.querySelector(#counter button[data - action= "increment"]');
+const incrementBtn = document.querySelector('#counter button[data-action= "increment"]');
     
     function onDecrementBtnClick() {
         counterValue += 1;
